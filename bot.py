@@ -15,6 +15,7 @@ async def main() -> None:
     bot = Bot(token=config.tg_bot.token)
     dp = Dispatcher()
 
+    # Подключаем routers к root router 
     dp.include_router(router=user_handlers.router)
     dp.include_router(router=other_handlers.router)
 
